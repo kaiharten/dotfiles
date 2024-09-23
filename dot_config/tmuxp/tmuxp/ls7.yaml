@@ -1,0 +1,42 @@
+session_name: ls7
+start_directory: /home/kharten/dev/projects/loadsensingg7/
+windows:
+  - window_name:  ide
+    layout: main-horizontal
+    options:
+      main-pane-height: 85%
+    shell_command_before:
+      - workon wsnode
+      - clear
+    panes:
+      - shell_command:
+        - vim
+      - shell_command:
+        - cd Firmware/LoadSensingG_App/armgcc
+        - clear
+  - window_name: git
+    layout: main-vertical
+    options:
+      main-pane-width: 65%
+    panes:
+      - shell_command:
+          - lazygit
+  - window_name: build and test
+    layout: main-vertical
+    options:
+      main-pane-width: 50%
+    shell_command_before:
+      - workon wsnode
+      - clear
+    panes:
+      - shell_command:
+        - cd Firmware/LoadSensingG_App/armgcc
+        - clear
+      - shell_command:
+        - cd DevTools/InMsgs
+        - clear
+        - eza
+      - shell_command:
+        - cd DevTools
+        - clear
+        - eza

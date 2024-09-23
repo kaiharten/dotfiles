@@ -1,0 +1,49 @@
+# _                          _   _
+#| |_ _ __ ___  _   ___  __ | |_| |__   ___ _ __ ___   ___
+#| __| '_ ` _ \| | | \ \/ / | __| '_ \ / _ \ '_ ` _ \ / _ \
+#| |_| | | | | | |_| |>  <  | |_| | | |  __/ | | | | |  __/
+# \__|_| |_| |_|\__,_/_/\_\  \__|_| |_|\___|_| |_| |_|\___|
+#
+ 
+# Colors 0-15 defined in .Xresources
+# colour233 = solid black
+# colour243 = grey
+# colour233 = solid black
+ 
+# Base status bar colors
+set -g status-style fg=colour10,bg=colour8
+ 
+# Example conditional
+# #{?pane_in_mode,#[fg=white#,bg=red],#[fg=red#,bg=white]}#W .
+ 
+# Left side of status bar
+set -g status-left-length 30
+set -g status-left "#{?client_prefix,#[fg=colour10#,bg=colour0#,bold],#[fg=colour233#,bg=colour10#,bold]} #S #{?client_prefix,#[fg=colour0#,bg=colour243#,nobold],#[fg=colour10#,bg=colour243#,nobold]}#[fg=colour233,bg=colour243,bold] #(whoami) #{?client_prefix,             #[bg=colour10#,fg=colour243],#[fg=colour243#,bg=colour0]}#{?client_prefix,#[fg=colour233#,bg=colour10],#[fg=colour10#,bg=colour0#,bold]} #I:#P #{?client_prefix,#[fg=colour10#,bg=colour8],#[fg=colour0#,bg=colour8#,nobold]}"
+ 
+# Window status (middle)
+set -g window-status-format "#[fg=colour10]#[bg=colour8]  #I:#W#F  "
+set -g window-status-current-format "#[fg=colour0,bg=colour8]#[fg=colour10,bold,bg=colour0] #I:#W#F #[fg=colour0,bg=colour8,nobold]"
+ 
+# Right side of status bar
+set -g status-right "#{?client_prefix,#[fg=colour10#,bg=colour8],#[fg=colour0#,bg=colour8]}#{?client_prefix,#[fg=colour233#,bg=colour10#,bold],#[fg=colour10#,bg=colour0,bold]}%l:%M %p #{?client_prefix,#[bg=colour10#,fg=colour243],#[fg=colour243#,                           bg=colour0]}#[fg=colour233,bg=colour243] %b-%d-%y #{?client_prefix,#[fg=colour0#,bg=colour243#,nobold],#[fg=colour10#,bg=colour243#,nobold]}#{?client_prefix,#[fg=colour10#,bg=colour0#,bold],#[fg=colour233#,bg=colour10#,bold]} #H "
+ 
+# Window separator
+set -g window-status-separator ""
+ 
+# Window status alignment
+set -g status-justify centre
+ 
+# Pane border
+set -g pane-border-style bg=colour0,fg=colour243
+ 
+# Active pane border
+set -g pane-active-border-style bg=colour0,fg=colour10
+ 
+# Message
+set -g message-style bg=colour0,fg=colour10
+ 
+# Command message
+set -g message-command-style bg=colour0,fg=colour10
+ 
+# Mode
+set -g mode-style bg=colour0,fg=colour10
