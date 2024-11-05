@@ -79,10 +79,11 @@ source $ZSH/oh-my-zsh.sh
 # setup virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+source ~/.local/bin/virtualenvwrapper.sh
 
 # add extra paths
 export PATH=$PATH:/home/kharten/dev/projects/loadsensingg7/DevTools/Misc
+export PATH="$HOME/.local/bin:$PATH"
 
 export STM32_PRG_PATH=/home/kharten/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin
 export ST_PROGRAMMER_PATH=/opt/st_tools/CubeProgrammer/bin
@@ -90,6 +91,8 @@ export DISABLE_AUTO_TITLE="true"
 export TMUXP_CONFIGDIR=$HOME/.config/tmuxp
 export PATH=$PATH:/opt/nvim-linux64/bin
 export PATH=$PATH:/home/kharten/dev/projects/loadsensingg7/DevTools/Utils
+export PATH="$PATH:/home/kharten/dev/projects/loadsensingg7/DevTools/Misc"
+export PATH="$PATH:/home/kharten/bin/"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -117,6 +120,10 @@ export PATH=$PATH:/home/kharten/dev/projects/loadsensingg7/DevTools/Utils
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias vim="nvim"
+alias gols7="cd ~/dev/projects/loadsensingg7/"
+alias gocompile="cd ~/dev/projects/loadsensingg7/Firmware/LoadSensingG_App/armgcc/"
 
 eval "$(zoxide init zsh --cmd cd)"
 source /usr/share/doc/fzf/examples/key-bindings.zsh
